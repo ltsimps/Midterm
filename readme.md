@@ -1,6 +1,7 @@
 #Midterm-Metis 
-[![Build Status](https://travis-ci.org/dpiet/cpp-boilerplate.svg?branch=master)](https://travis-ci.org/dpiet/cpp-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/github/dpiet/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/dpiet/cpp-boilerplate?branch=master)
+[![Build Status](https://travis-ci.org/ltsimps/Midterm.svg?branch=master)](https://travis-ci.org/ltsimps/Midterm)
+
+[![Coverage Status](https://coveralls.io/repos/github/ltsimps/Midterm/badge.svg?branch=master)](https://coveralls.io/github/ltsimps/Midterm?branch=master)
 ---
 
 ## Overview

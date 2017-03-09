@@ -14,12 +14,12 @@ endif()
 
 # Setup the coveralls target and tell it to gather
 # coverage data for all the lib sources.
-if (COVERALLS)
-	coveralls_setup(
-        "${LIB_SRC}" 
-        ${COVERALLS_UPLOAD}                 
-        "${CMAKE_SOURCE_DIR}/coveralls-cmake/cmake")
-endif()
+#if (COVERALLS)
+#	coveralls_setup(
+#        "${LIB_SRC}" 
+#        ${COVERALLS_UPLOAD}                 
+#        "${CMAKE_SOURCE_DIR}/coveralls-cmake/cmake")
+#endif()
 
 
 
