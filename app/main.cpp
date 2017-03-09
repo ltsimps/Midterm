@@ -4,6 +4,6 @@
 int main()
 {
     dummy();
-    std::cout<<"testing"<<std::endl;
+    std::cout<<"testing1"<<std::endl;
     return 0;
 }
