@@ -21,6 +21,6 @@ https://docs.google.com/a/terpmail.umd.edu/spreadsheets/d/1wB8Fqtjaw88LNrhkzxSVg
 
 - Checkout the repo (and submodules)
 ```
-$ git clone --recursive https://github.com/dpiet/cpp-boilerplate.git
+$ git clone --https://github.com/ltsimps/Midterm.git
 ```
 
