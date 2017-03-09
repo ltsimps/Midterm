@@ -9,6 +9,8 @@ Initial Midterm Commit
 - cmake
 - googletest
 
+#Description of Project
+
 ##SIP Documentation 
 - Product Backlog
  https://docs.google.com/spreadsheets/d/1k9nfP__eNjIogFFWyNJw3ogN-HQ8udzpHaOekOiXbZU/edit?usp=sharing
