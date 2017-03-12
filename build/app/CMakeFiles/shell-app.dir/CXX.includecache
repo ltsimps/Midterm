@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Parser.hpp
+iostream
+-
+string
+-
+
+/home/viki/workspace/Midterm/app/Parser.cpp
+Parser.hpp
+-
+vector
+-
+string
+-
+iostream
+-
+algorithm
+-
+sstream
+-
+iterator
+-
+
+/home/viki/workspace/Midterm/app/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+string
+-
+Parser.hpp
+-
+
