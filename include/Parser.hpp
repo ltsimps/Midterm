@@ -17,6 +17,8 @@ class Parser {
   Parser();
 
   std::string getInput();
+  std::string getFileInput();
+
   void setInput(std::string input);
 
 

@@ -25,7 +25,9 @@ int main() {
     myfile.close();*/
 
    Parser  p;
-   cout<<  p.getInput()<<endl;
+   //cout<<  p.getInput()<<endl;
+   cout<<  p.getFileInput()<<endl;
+
   // p.setInput("hddjfas");
    //cout << "testing1 " << p << std::endl;
 

@@ -4,7 +4,7 @@
  * @author Lamar Simpson
  * Copyright 2017 Lamar Simpson
  *@brief Class that handles all input and parses it out into a format that Semantics class can use.
- **@details implementation of PID_CONTROLLER class.
+ **@details implementation of Parser class.
  */
 #include <Parser.hpp>
 #include <vector>
@@ -14,10 +14,12 @@
 #include <algorithm>
 #include <sstream>
 #include <iterator>
+#include<fstream>
 
 
 using std::cin;
 using std::string;
+
 
  Parser::Parser(){
 
@@ -51,10 +53,38 @@ std::string Parser::getInput() {
      // Now add the last element with no delimiter
     // oss << vec.back();
    }
-
-
-
-
   //return  std::string::str(file.begin(), file.end());
    return oss.str();
 }
+
+
+std::string Parser::getFileInput() {
+  std::ifstream inputFile{"../Positive_Examples/Positive_Example_1.txt"};
+
+  std::vector<string> file;
+
+
+  // test file open
+  if (inputFile) {
+      string value;
+
+      // read the elements in the file into a vector
+      while ( inputFile >> value ) {
+          file.push_back(value);
+      }
+  }
+  // close the file
+   std::ostringstream oss;
+
+   if (!file.empty())
+   {
+     // Convert all but the last element to avoid a trailing ","
+     std::copy(file.begin(), file.end(),
+               std::ostream_iterator<string>(oss, " "));
+
+     // Now add the last element with no delimiter
+   }
+  //return  std::string::str(file.begin(), file.end());
+   return oss.str();
+}
+
