@@ -26,7 +26,11 @@ int main() {
 
    Parser  p;
    //cout<<  p.getInput()<<endl;
-   cout<<  p.getFileInput()<<endl;
+   std::vector<string> vectorOutput = p.getFileInput();
+   string strOutput = p.stringConversion(vectorOutput);
+   cout<< strOutput << endl;
+   p.generateHistogram(vectorOutput);
+
 
   // p.setInput("hddjfas");
    //cout << "testing1 " << p << std::endl;

@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <map>
+#include <vector>
 
 /**
  *
@@ -16,8 +18,13 @@ class Parser {
  public:
   Parser();
 
-  std::string getInput();
-  std::string getFileInput();
+  std::vector<std::string> getInput();
+  std::vector<std::string> getFileInput();
+  std::map<std::string, int> generateHistogram(std::vector<std::string> input);
+  std::string stringConversion(std::vector<std::string> input);
+  //std::string stringConversion(std::map<std::string, int> input);
+
+
 
   void setInput(std::string input);
 

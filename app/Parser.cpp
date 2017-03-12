@@ -26,12 +26,28 @@ using std::string;
  }
 
 
+
  void Parser::setInput(std::string input) {
   this->input = input;
 }
 
+std::string Parser::stringConversion(std::vector<std::string> input){
+   std::ostringstream oss;
+     if (!input.empty())
+     {
+       // Convert all but the last element to avoid a trailing ","
+       std::copy(input.begin(), input.end(),
+                 std::ostream_iterator<string>(oss, " "));
 
-std::string Parser::getInput() {
+       // Now add the last element with no delimiter
+     }
+    //return  std::string::str(file.begin(), file.end());
+     return oss.str();
+ }
+
+
+
+std::vector<std::string> Parser::getInput() {
 
   string line;
   std::vector<string> file;
@@ -42,23 +58,12 @@ std::string Parser::getInput() {
           break;
        file.push_back(line);
    }
-   std::ostringstream oss;
 
-   if (!file.empty())
-   {
-     // Convert all but the last element to avoid a trailing ","
-     std::copy(file.begin(), file.end(),
-               std::ostream_iterator<string>(oss, " "));
-
-     // Now add the last element with no delimiter
-    // oss << vec.back();
-   }
-  //return  std::string::str(file.begin(), file.end());
-   return oss.str();
+   return file;
 }
 
 
-std::string Parser::getFileInput() {
+std::vector<std::string> Parser::getFileInput() {
   std::ifstream inputFile{"../Positive_Examples/Positive_Example_1.txt"};
 
   std::vector<string> file;
@@ -74,17 +79,29 @@ std::string Parser::getFileInput() {
       }
   }
   // close the file
-   std::ostringstream oss;
 
-   if (!file.empty())
-   {
-     // Convert all but the last element to avoid a trailing ","
-     std::copy(file.begin(), file.end(),
-               std::ostream_iterator<string>(oss, " "));
 
-     // Now add the last element with no delimiter
-   }
-  //return  std::string::str(file.begin(), file.end());
-   return oss.str();
+  return file;
+
 }
+
+
+
+
+std::map<std::string,int > Parser::generateHistogram(std::vector<string> input){
+  std::map<std::string,int> histogram;
+
+  for (const string & s : input) { ++histogram[s]; }
+
+
+  for (const auto & p : histogram)
+  {
+      std::cout << "Word '" << p.first << "' occurs " << p.second << " times.\n";
+  }
+
+
+  return histogram;
+
+}
+
 
