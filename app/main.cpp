@@ -1,17 +1,36 @@
 #include <iostream>
-#include <lib.hpp>
+#include <fstream>
+#include <vector>
+#include <string>
+
+#include  <Parser.hpp>
+
+
 /**
  * @file   main.cpp
  * @date   Mar 09, 2017
  * @author Lamar Simpson
  * Copyright 2017 Lamar Simpson
- *
- *@brief
- *@details
+ *@brief Parsed input from the user.
  */
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
 
 int main() {
-    dummy();
-    std::cout << "testing1" << std::endl;
+    /*ofstream myfile;
+    myfile.open ("example.txt");
+    myfile << "Writing this to a file.\n";
+    myfile.close();*/
+
+   Parser  p;
+   cout<<  p.getInput()<<endl;
+  // p.setInput("hddjfas");
+   //cout << "testing1 " << p << std::endl;
+
+
+
+  std::cout<<"hello oworld "<<std::endl;
     return 0;
 }

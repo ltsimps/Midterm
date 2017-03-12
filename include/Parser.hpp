@@ -1,7 +1,6 @@
 #pragma once
-
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 
 /**
  *
@@ -15,7 +14,11 @@
 
 class Parser {
  public:
-  void getInput();
+  Parser();
+
+  std::string getInput();
+  void setInput(std::string input);
+
 
  private:
   std::string input;
