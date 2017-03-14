@@ -19,11 +19,18 @@
 using std::cin;
 using std::string;
 
+/**
+  * @brief  Constructor Parser Class
+ */
 Parser::Parser() {
   this->input = "";
 }
 
 
+/**
+  * @brief  setInput assigns a value to the Parser class member variable input.
+  * @param  input  std::string
+ */
 
 void Parser::setInput(std::string input) {
 this->input = input;
@@ -33,7 +40,7 @@ this->input = input;
   * @brief  stringCoversion takes an input vector and returns string output
   * @param  input  std::vector<std::string>
   * @return string
-*/
+ */
 std::string Parser::stringConversion(std::vector<std::string> input) {
 std::ostringstream oss;
 
@@ -69,7 +76,10 @@ std::vector<std::string> Parser::getInput() {
    * @return std::vector<std::string> that contains all input from files specified by the user or file exemplars.
   */
 std::vector<std::string> Parser::getFileInput() {
-  std::ifstream inputFile{"../Positive_Examples/Positive_Example_1.txt"};
+  // std::ifstream inputFile{"../Positive_Examples/Positive_Example_1.txt"};
+
+  std::ifstream inputFile{"../Negative_Examples/Negative_Example_1.txt"};
+
 
   std::vector<string> file;
 

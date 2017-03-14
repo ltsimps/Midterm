@@ -46,10 +46,17 @@ class Parser {
   // std::string stringConversion(std::map<std::string, int> input);
 
 
-
+  /**
+    * @brief  setInput sets the input class member variable.
+    * @param  input std::string
+    * @return string
+  */
   void setInput(std::string input);
 
 
  private:
+  /**
+    * @brief  input is class member variable that hold input from files or user input on the commandline.
+  */
   std::string input;
 };

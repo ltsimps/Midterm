@@ -1,5 +1,12 @@
-#include <iostream>
+/**
+ * @file   PositiveSentitment.cpp
+ * @date   Mar 14, 2017
+ * @author Lamar Simpson
+ *@brief Class that analyzes text for Positive sentiment.
+ *Copyright 2017 Lamar Simpson
+ */
 #include<PositiveSentiment.hpp>
+#include <iostream>
 #include<fstream>
 #include <string>
 #include <vector>
@@ -10,8 +17,13 @@ using std::string;
 
 
 
- void PositiveSentiment::loadWordlist()  {
-    std::cout<<" testing PositiveSentiment loadWordList" <<std::endl;
+
+/**
+  * @brief loadwordlist for the NegativeSentiment class preloads a dictionary of positive words.
+ */
+
+void PositiveSentiment::loadWordlist()  {
+    std::cout << " testing PositiveSentiment loadWordList" << std::endl;
 
     std::ifstream inputFile{"../positive_words.txt"};
 
@@ -28,36 +40,31 @@ using std::string;
         }
     }
     // close the file
-    for(auto token : wordlist){
-      std::cout<< token << std::endl;
+    for ( auto token : wordlist ) {
+      std::cout << token << std::endl;
     }
 
     setWordlist(wordlist);
- }
+}
 
 
 
 
+  /**
+   * @brief analysis takes in a histogram of input and returns a negative or positive score based on word frequency.
+   * @return std::string.
+   */
 
-
- std::string PositiveSentiment::analysis( std::map<string, int> histogram){
+std::string PositiveSentiment::analysis(std::map<string, int> histogram) {
     int score = 1;
 
-
-
-     for (const auto & p : histogram)
-     {
-         //std::cout << "Word '" << p.first << "' occurs " << p.second << " times.\n";
-         if(wordlist.find(p.first) != wordlist.end() ){
-           std::cout << " set contains " <<p.first <<  " " <<p.second <<std::endl;
+     for (const auto & p : histogram) {
+         if ( wordlist.find(p.first) != wordlist.end() ) {
            score +=p.second;
-
-           std::cout << "Score " <<score <<std::endl;
-
          }
      }
 
     setEmotionScore(score);
 
-   return " ";
- }
+  return " ";
+}

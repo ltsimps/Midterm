@@ -37,3 +37,14 @@ $ git clone --https://github.com/ltsimps/Midterm.git
         and Comparing Opinions on the Web." Proceedings of the 14th 
         International World Wide Web conference (WWW-2005), May 10-14, 
         2005, Chiba, Japan.
+
+  Theresa Wilson, Janyce Wiebe, Paul Hoffmann
+	Recognizing Contextual Polarity in Phrase-Level Sentiment Analysis
+	Intelligent Systems Program Department of Computer Science Intelligent Systems Program
+	University of Pittsburgh University of Pittsburgh University of Pittsburgh Pittsburgh, PA 15260
+	Pittsburgh, PA 15260 Pittsburgh, PA 15260
+	twilson@cs.pitt.edu wiebe@cs.pitt.edu hoffmanp@cs.pitt.edu
+	http://people.cs.pitt.edu/~wiebe/pubs/papers/emnlp05polarity.pdf
+	
+	
+	

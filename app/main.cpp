@@ -50,7 +50,7 @@ int main() {
  int negativeScore = sp->getEmotionScore();
 
 
- (positiveScore > negativeScore)?std::cout<<"POSITIVE":std::cout<<"NEGATIVE"<std::endl;
+ (positiveScore > negativeScore)?std::cout<<"POSITIVE":std::cout<<"NEGATIVE"<<std::endl;
 
 
 
