@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <set>
+#include <map>
+#include <vector>
 
 /**
  * @file   Sentitment.cpp
@@ -12,7 +14,7 @@
 
 class Sentiment{
 public:
-    std::string analysis();
+  virtual std::string analysis(std::map<std::string, int> histogram);
   virtual void loadWordlist();
   void setEmotionScore(int emotionScore);
   void setWordlist(std::set<std::string> wordlist);

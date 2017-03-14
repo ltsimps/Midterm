@@ -1,5 +1,8 @@
 #include <Sentiment.hpp>
 #include <iostream>
+#include <string>
+
+using std::string;
 
  int Sentiment::getEmotionScore() const  {
     return emotionScore;
@@ -24,3 +27,15 @@
     std::cout<<"Base class word list "<<std::endl;
 
   }
+
+   std::string Sentiment::analysis(std::map<std::string, int> histogram){
+
+     for (const auto & p : histogram)
+     {
+         std::cout << "Word '" << p.first << "' occurs " << p.second << " times.\n";
+     }
+
+
+        return " ";
+      }
+

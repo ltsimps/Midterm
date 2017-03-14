@@ -34,3 +34,30 @@ using std::string;
 
     setWordlist(wordlist);
  }
+
+
+
+
+
+
+ std::string PositiveSentiment::analysis( std::map<string, int> histogram){
+    int score = 1;
+
+
+
+     for (const auto & p : histogram)
+     {
+         //std::cout << "Word '" << p.first << "' occurs " << p.second << " times.\n";
+         if(wordlist.find(p.first) != wordlist.end() ){
+           std::cout << " set contains " <<p.first <<  " " <<p.second <<std::endl;
+           score +=p.second;
+
+           std::cout << "Score " <<score <<std::endl;
+
+         }
+     }
+
+    setEmotionScore(score);
+
+   return " ";
+ }

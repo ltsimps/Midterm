@@ -10,7 +10,8 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include<memory>
+#include <map>
+#include <memory>
 #include <Parser.hpp>
 #include <Sentiment.hpp>
 #include <PositiveSentiment.hpp>
@@ -27,27 +28,32 @@ int main() {
   NegativeSentiment ns;
 
   Sentiment *sp;
-
   sp = &ps;
-  //Sentiment ns = NegativeSentiment();
 
-
-
-
-
-  // cout<<  p.getInput()<<endl;
   std::vector<string> vectorOutput = p.getFileInput();
   string strOutput = p.stringConversion(vectorOutput);
+
   cout<< strOutput << endl;
-  p.generateHistogram(vectorOutput);
+  std::map<string, int> histogram =  p.generateHistogram(vectorOutput);
+
+
   cout << "\033[1;31mbold red text\033[0m\n";
 
 
  sp->loadWordlist();
+ sp->analysis(histogram);
+ int positiveScore = sp->getEmotionScore();
 
  sp  = &ns;
-
  sp->loadWordlist();
+ sp->analysis(histogram);
+ int negativeScore = sp->getEmotionScore();
+
+
+ (positiveScore > negativeScore)?std::cout<<"POSITIVE":std::cout<<"NEGATIVE"<std::endl;
+
+
+
 
 
   return 0;
