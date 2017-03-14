@@ -10,14 +10,15 @@ TEST(dummy, should_pass)
     EXPECT_EQ(1, 1);
 }
 
-
+/**
+ * @brief Test the input function on file input to make sure it returns nonzero values when reading files
+ */
 
 TEST(input, inputNonzero)
 {
   Parser  p;
-  string s = "akdfjkas";
-    //EXPECT_GT( p.getInput().size(), 0);
-  EXPECT_GT( s.size(), 0);
+  std::vector<string> testInput = p.getFileInput();
+  EXPECT_GT( testInput.size(), 0);
 
 }
 

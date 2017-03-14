@@ -10,7 +10,6 @@
 #include <vector>
 #include <string>
 #include <iostream>
-
 #include <algorithm>
 #include <sstream>
 #include <iterator>
@@ -20,49 +19,55 @@
 using std::cin;
 using std::string;
 
-
- Parser::Parser(){
-
- }
-
-
-
- void Parser::setInput(std::string input) {
-  this->input = input;
+Parser::Parser() {
+  this->input = "";
 }
 
-std::string Parser::stringConversion(std::vector<std::string> input){
-   std::ostringstream oss;
-     if (!input.empty())
-     {
-       // Convert all but the last element to avoid a trailing ","
-       std::copy(input.begin(), input.end(),
-                 std::ostream_iterator<string>(oss, " "));
-
-       // Now add the last element with no delimiter
-     }
-    //return  std::string::str(file.begin(), file.end());
-     return oss.str();
- }
 
 
+void Parser::setInput(std::string input) {
+this->input = input;
+}
+
+ /**
+  * @brief  stringCoversion takes an input vector and returns string output
+  * @param  input  std::vector<std::string>
+  * @return string
+*/
+std::string Parser::stringConversion(std::vector<std::string> input) {
+std::ostringstream oss;
+
+if(!input.empty()) {
+std::copy(input.begin(), input.end(),
+std::ostream_iterator<string>(oss, " "));
+}
+  return oss.str();
+}
+
+
+  /**
+   * @brief Handles getting input from File exemplars or user specified files.
+   * @return std::vector<std::string> that contains all input from files specified by the user or file exemplars.
+  */
 
 std::vector<std::string> Parser::getInput() {
-
   string line;
   std::vector<string> file;
 
-   while(getline(cin,line))
-   {
+  while ( getline(cin, line) ) {
        if (line.empty())
           break;
        file.push_back(line);
-   }
+  }
 
-   return file;
+  return file;
 }
 
 
+/**
+   * @brief Handles getting input from File exemplars or user specified files.
+   * @return std::vector<std::string> that contains all input from files specified by the user or file exemplars.
+  */
 std::vector<std::string> Parser::getFileInput() {
   std::ifstream inputFile{"../Positive_Examples/Positive_Example_1.txt"};
 
@@ -82,14 +87,17 @@ std::vector<std::string> Parser::getFileInput() {
 
 
   return file;
-
 }
 
 
 
-
-std::map<std::string,int > Parser::generateHistogram(std::vector<string> input){
-  std::map<std::string,int> histogram;
+  /**
+   * @brief  generateHistogram takes a input vector and counts the frequency of words in that input and return a map
+   * @param  input  std::vector<std::string>
+   * @return map<std::string, int>
+   */
+std::map<string, int> Parser::generateHistogram(std::vector<string> input) {
+std::map<string, int> histogram;
 
   for (const string & s : input) { ++histogram[s]; }
 
@@ -101,7 +109,6 @@ std::map<std::string,int > Parser::generateHistogram(std::vector<string> input){
   */
 
   return histogram;
-
 }
 
 
