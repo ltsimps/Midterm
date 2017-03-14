@@ -11,9 +11,9 @@
 #include <string>
 #include <iostream>
 #include <algorithm>
-#include <sstream>
 #include <iterator>
 #include<fstream>
+#include <sstream>
 
 
 using std::cin;
@@ -59,12 +59,19 @@ std::ostream_iterator<string>(oss, " "));
 
 std::vector<std::string> Parser::getInput() {
   string line;
+  string input = "";
   std::vector<string> file;
+
 
   while ( getline(cin, line) ) {
        if (line.empty())
           break;
-       file.push_back(line);
+       std::stringstream ss(line);
+       string s;
+
+       while (getline(ss, s, ' ')) {
+         file.push_back(s);
+       }
   }
 
   return file;
@@ -75,10 +82,10 @@ std::vector<std::string> Parser::getInput() {
    * @brief Handles getting input from File exemplars or user specified files.
    * @return std::vector<std::string> that contains all input from files specified by the user or file exemplars.
   */
-std::vector<std::string> Parser::getFileInput() {
+std::vector<std::string> Parser::getFileInput(std::string in ) {
   // std::ifstream inputFile{"../Positive_Examples/Positive_Example_1.txt"};
 
-  std::ifstream inputFile{"../Negative_Examples/Negative_Example_1.txt"};
+  std::ifstream inputFile{in};
 
 
   std::vector<string> file;
@@ -94,7 +101,7 @@ std::vector<std::string> Parser::getFileInput() {
       }
   }
   // close the file
-
+  // std::cin.sync();
 
   return file;
 }

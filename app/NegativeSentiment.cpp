@@ -14,8 +14,6 @@
   */
 
 void NegativeSentiment::loadWordlist()  {
-    std::cout <<" testing  Negative loadWordList" << std::endl;
-
     std::ifstream inputFile{"../negative_words.txt"};
 
     std::set<string> wordlist;
@@ -31,9 +29,10 @@ void NegativeSentiment::loadWordlist()  {
         }
     }
     // close the file
-    for ( auto token : wordlist ) {
+    /* for ( auto token : wordlist ) {
       std::cout << token << std::endl;
     }
+    */
 
     setWordlist(wordlist);
 }
@@ -49,9 +48,7 @@ std::string NegativeSentiment::analysis(std::map<string, int> histogram) {
 
      for (const auto & p : histogram) {
        if ( wordlist.find(p.first) != wordlist.end() ) {
-        std::cout << " set contains " <<p.first <<  " " <<p.second <<std::endl;
         score +=p.second;
-        std::cout << "Score " <<score <<std::endl;
        }
       }
 

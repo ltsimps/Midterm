@@ -1,0 +1,61 @@
+\hypertarget{classNegativeSentiment}{\section{Negative\-Sentiment Class Reference}
+\label{classNegativeSentiment}\index{Negative\-Sentiment@{Negative\-Sentiment}}
+}
+Inheritance diagram for Negative\-Sentiment\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNegativeSentiment}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classNegativeSentiment_ae6f3705da961d94f33f93e161b1e506f}{analysis} (std\-::map$<$ std\-::string, int $>$ histogram) override
+\begin{DoxyCompactList}\small\item\em analysis for \hyperlink{classNegativeSentiment}{Negative\-Sentiment} calculates the negative score for input. \end{DoxyCompactList}\item 
+void \hyperlink{classNegativeSentiment_a19e8a3892275cb49ebc8b3bc2294f129}{load\-Wordlist} () override
+\begin{DoxyCompactList}\small\item\em loadwordlist for the \hyperlink{classNegativeSentiment}{Negative\-Sentiment} class loads a negative wordlist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classNegativeSentiment_ae6f3705da961d94f33f93e161b1e506f}{\index{Negative\-Sentiment@{Negative\-Sentiment}!analysis@{analysis}}
+\index{analysis@{analysis}!NegativeSentiment@{Negative\-Sentiment}}
+\subsubsection[{analysis}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Negative\-Sentiment\-::analysis (
+\begin{DoxyParamCaption}
+\item[{std\-::map$<$ std\-::string, int $>$}]{histogram}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classNegativeSentiment_ae6f3705da961d94f33f93e161b1e506f}
+
+
+analysis for \hyperlink{classNegativeSentiment}{Negative\-Sentiment} calculates the negative score for input. 
+
+analysis takes in a histogram of input and returns a negative or positive score based on word frequency.
+
+\begin{DoxyReturn}{Returns}
+std\-::string. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classSentiment_afddbb12fdb928ae171a88debef10234a}{Sentiment}.
+
+\hypertarget{classNegativeSentiment_a19e8a3892275cb49ebc8b3bc2294f129}{\index{Negative\-Sentiment@{Negative\-Sentiment}!load\-Wordlist@{load\-Wordlist}}
+\index{load\-Wordlist@{load\-Wordlist}!NegativeSentiment@{Negative\-Sentiment}}
+\subsubsection[{load\-Wordlist}]{\setlength{\rightskip}{0pt plus 5cm}void Negative\-Sentiment\-::load\-Wordlist (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classNegativeSentiment_a19e8a3892275cb49ebc8b3bc2294f129}
+
+
+loadwordlist for the \hyperlink{classNegativeSentiment}{Negative\-Sentiment} class loads a negative wordlist. 
+
+loadwordlist for the \hyperlink{classNegativeSentiment}{Negative\-Sentiment} class preloads a dictionary of negative words. 
+
+Reimplemented from \hyperlink{classSentiment_a5e7dabb641c08cadcab53bf92f2c3dde}{Sentiment}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/Negative\-Sentiment.\-hpp\item 
+app/Negative\-Sentiment.\-cpp\end{DoxyCompactItemize}

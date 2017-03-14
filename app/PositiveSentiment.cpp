@@ -23,8 +23,6 @@ using std::string;
  */
 
 void PositiveSentiment::loadWordlist()  {
-    std::cout << " testing PositiveSentiment loadWordList" << std::endl;
-
     std::ifstream inputFile{"../positive_words.txt"};
 
     std::set<string> wordlist;
@@ -40,10 +38,10 @@ void PositiveSentiment::loadWordlist()  {
         }
     }
     // close the file
-    for ( auto token : wordlist ) {
+   /* for ( auto token : wordlist ) {
       std::cout << token << std::endl;
     }
-
+   */
     setWordlist(wordlist);
 }
 

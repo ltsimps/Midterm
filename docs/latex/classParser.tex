@@ -1,0 +1,124 @@
+\hypertarget{classParser}{\section{Parser Class Reference}
+\label{classParser}\index{Parser@{Parser}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classParser_a12234f6cd36b61af4b50c94a179422c1}{\hyperlink{classParser_a12234f6cd36b61af4b50c94a179422c1}{Parser} ()}\label{classParser_a12234f6cd36b61af4b50c94a179422c1}
+
+\begin{DoxyCompactList}\small\item\em Constructor \hyperlink{classParser}{Parser} Class. \end{DoxyCompactList}\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{classParser_a28db3f32545756c9eec8a9bf74a8dad8}{get\-Input} ()
+\begin{DoxyCompactList}\small\item\em Handles getting user input from the commandline. \end{DoxyCompactList}\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{classParser_aa9014b8001ae933f1c26f692a155a029}{get\-File\-Input} (std\-::string in)
+\begin{DoxyCompactList}\small\item\em Handles getting input from File exemplars or user specified files. \end{DoxyCompactList}\item 
+std\-::map$<$ std\-::string, int $>$ \hyperlink{classParser_a53b6b2887c53a3fbedcd6df3cc1e69c8}{generate\-Histogram} (std\-::vector$<$ std\-::string $>$ input)
+\begin{DoxyCompactList}\small\item\em generate\-Histogram takes a input vector and counts the frequency of words in that input and return a map \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classParser_a44db102220d866c9e6a690523e41d970}{string\-Conversion} (std\-::vector$<$ std\-::string $>$ input)
+\begin{DoxyCompactList}\small\item\em string\-Coversion takes an input vector and returns string output \end{DoxyCompactList}\item 
+void \hyperlink{classParser_ab605f89b56af8e8f35dcde402edac7e4}{set\-Input} (std\-::string input)
+\begin{DoxyCompactList}\small\item\em set\-Input sets the input class member variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classParser_a53b6b2887c53a3fbedcd6df3cc1e69c8}{\index{Parser@{Parser}!generate\-Histogram@{generate\-Histogram}}
+\index{generate\-Histogram@{generate\-Histogram}!Parser@{Parser}}
+\subsubsection[{generate\-Histogram}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$ string, int $>$ Parser\-::generate\-Histogram (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::string $>$}]{input}
+\end{DoxyParamCaption}
+)}}\label{classParser_a53b6b2887c53a3fbedcd6df3cc1e69c8}
+
+
+generate\-Histogram takes a input vector and counts the frequency of words in that input and return a map 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & std\-::vector$<$std\-::string$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+map$<$std\-::string, int$>$ 
+\end{DoxyReturn}
+\hypertarget{classParser_aa9014b8001ae933f1c26f692a155a029}{\index{Parser@{Parser}!get\-File\-Input@{get\-File\-Input}}
+\index{get\-File\-Input@{get\-File\-Input}!Parser@{Parser}}
+\subsubsection[{get\-File\-Input}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ std\-::string $>$ Parser\-::get\-File\-Input (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{in}
+\end{DoxyParamCaption}
+)}}\label{classParser_aa9014b8001ae933f1c26f692a155a029}
+
+
+Handles getting input from File exemplars or user specified files. 
+
+\begin{DoxyReturn}{Returns}
+std\-::vector$<$std\-::string$>$ that contains all input from files specified by the user or file exemplars. 
+\end{DoxyReturn}
+\hypertarget{classParser_a28db3f32545756c9eec8a9bf74a8dad8}{\index{Parser@{Parser}!get\-Input@{get\-Input}}
+\index{get\-Input@{get\-Input}!Parser@{Parser}}
+\subsubsection[{get\-Input}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ std\-::string $>$ Parser\-::get\-Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classParser_a28db3f32545756c9eec8a9bf74a8dad8}
+
+
+Handles getting user input from the commandline. 
+
+Handles getting input from File exemplars or user specified files.
+
+\begin{DoxyReturn}{Returns}
+std\-::vector$<$std\-::string$>$ that contains all input from user on commandline.
+
+std\-::vector$<$std\-::string$>$ that contains all input from files specified by the user or file exemplars. 
+\end{DoxyReturn}
+\hypertarget{classParser_ab605f89b56af8e8f35dcde402edac7e4}{\index{Parser@{Parser}!set\-Input@{set\-Input}}
+\index{set\-Input@{set\-Input}!Parser@{Parser}}
+\subsubsection[{set\-Input}]{\setlength{\rightskip}{0pt plus 5cm}void Parser\-::set\-Input (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{input}
+\end{DoxyParamCaption}
+)}}\label{classParser_ab605f89b56af8e8f35dcde402edac7e4}
+
+
+set\-Input sets the input class member variable. 
+
+set\-Input assigns a value to the \hyperlink{classParser}{Parser} class member variable input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & std\-::string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em input} & std\-::string \\
+\hline
+\end{DoxyParams}
+\hypertarget{classParser_a44db102220d866c9e6a690523e41d970}{\index{Parser@{Parser}!string\-Conversion@{string\-Conversion}}
+\index{string\-Conversion@{string\-Conversion}!Parser@{Parser}}
+\subsubsection[{string\-Conversion}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Parser\-::string\-Conversion (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::string $>$}]{input}
+\end{DoxyParamCaption}
+)}}\label{classParser_a44db102220d866c9e6a690523e41d970}
+
+
+string\-Coversion takes an input vector and returns string output 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & std\-::vector$<$std\-::string$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Parser_8hpp}{Parser.\-hpp}\item 
+app/\hyperlink{Parser_8cpp}{Parser.\-cpp}\end{DoxyCompactItemize}

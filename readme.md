@@ -1,4 +1,4 @@
-#Midterm-Metis 
+## Midterm-Metis 
 [![Build Status](https://travis-ci.org/ltsimps/Midterm.svg?branch=master)](https://travis-ci.org/ltsimps/Midterm)
 
 [![Coverage Status](https://coveralls.io/repos/github/ltsimps/Midterm/badge.svg?branch=master)](https://coveralls.io/github/ltsimps/Midterm?branch=master)
@@ -10,9 +10,30 @@ Initial Midterm Commit
 - cmake
 - googletest
 
-#Description of Project
+## Description of Project
+Metis:
 
-##SIP Documentation 
+Metis is a robot that shows the emotional content of it's surroundings. This midterm project deals with the perception by analyzing  Sentiment. This program reads input from the user or from files and denotes whether it is positive or negative
+
+
+#Demo
+When running the program simply enter the words you would like to have anaylzed and Metis will tell you if they are positive or negative.
+
+#BUG
+Right now there is a bug with the program and it's unable to run more than once. The program must be restarted for further analysis.
+
+
+
+
+#Exemplars 
+This project contains a number of examples in 
+$../Positive_Examples 
+$../Negative_Examples
+
+These exemplars can be used to for analysis.
+
+
+## SIP Documentation 
 - Product Backlog
  https://docs.google.com/spreadsheets/d/1k9nfP__eNjIogFFWyNJw3ogN-HQ8udzpHaOekOiXbZU/edit?usp=sharing
 
@@ -26,7 +47,26 @@ https://docs.google.com/a/terpmail.umd.edu/spreadsheets/d/1wB8Fqtjaw88LNrhkzxSVg
 ```
 $ git clone --https://github.com/ltsimps/Midterm.git
 
+
+## Build and Run Project
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+
+#To Run the program
+$ ./app/metis
+
+#To Test the program
+./test/test-cpp
+
 ```
+
+##Doxygen Documentation
+Contained in the docs folder of the project.
+
+$ cd docs/
+
 
 ##References
   Minqing Hu and Bing Liu. "Mining and Summarizing Customer Reviews." 

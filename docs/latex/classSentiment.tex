@@ -1,0 +1,106 @@
+\hypertarget{classSentiment}{\section{Sentiment Class Reference}
+\label{classSentiment}\index{Sentiment@{Sentiment}}
+}
+Inheritance diagram for Sentiment\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSentiment}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\-::string \hyperlink{classSentiment_afddbb12fdb928ae171a88debef10234a}{analysis} (std\-::map$<$ std\-::string, int $>$ histogram)
+\begin{DoxyCompactList}\small\item\em analysis is a virtual function meant to be overriden by derived classes for the base classes analysis needs. \end{DoxyCompactList}\item 
+\hypertarget{classSentiment_a5e7dabb641c08cadcab53bf92f2c3dde}{virtual void \hyperlink{classSentiment_a5e7dabb641c08cadcab53bf92f2c3dde}{load\-Wordlist} ()}\label{classSentiment_a5e7dabb641c08cadcab53bf92f2c3dde}
+
+\begin{DoxyCompactList}\small\item\em loadwordlist for the \hyperlink{classSentiment}{Sentiment} class is a virtual function meant to be overriden by derived classes to define functionality for sentiment . \end{DoxyCompactList}\item 
+void \hyperlink{classSentiment_aec1c59286392c42b307aade917128b45}{set\-Emotion\-Score} (int \hyperlink{classSentiment_a5a1779a5a705df433195ec737a4156ea}{emotion\-Score})
+\begin{DoxyCompactList}\small\item\em set\-Emotion\-Score assigns a value to the emotionscore class member variable \end{DoxyCompactList}\item 
+void \hyperlink{classSentiment_a7845d7438489c469e24ed2018b8f28cc}{set\-Wordlist} (std\-::set$<$ std\-::string $>$ \hyperlink{classSentiment_a177fabec96128aa37489b4db240535ae}{wordlist})
+\begin{DoxyCompactList}\small\item\em set\-Wordlist assigns a value to the wordlist class member set \end{DoxyCompactList}\item 
+\hypertarget{classSentiment_a3a88696162756d042ff19f298103fca4}{int \hyperlink{classSentiment_a3a88696162756d042ff19f298103fca4}{get\-Emotion\-Score} () const }\label{classSentiment_a3a88696162756d042ff19f298103fca4}
+
+\begin{DoxyCompactList}\small\item\em get\-Emotion\-Score returns the value of the emotionscore class member variable \end{DoxyCompactList}\item 
+\hypertarget{classSentiment_aded4e0137351e5a389a4f31be52be57b}{std\-::set$<$ std\-::string $>$ \hyperlink{classSentiment_aded4e0137351e5a389a4f31be52be57b}{get\-Wordlist} () const }\label{classSentiment_aded4e0137351e5a389a4f31be52be57b}
+
+\begin{DoxyCompactList}\small\item\em get\-Wordlist returns the value of the wordlist class member set \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classSentiment_a77da2ef7ddef68132cba46d8304a5ad1}{Emotions} \{ {\bfseries Positive} = 1, 
+{\bfseries Negative} = -\/1
+ \}
+\begin{DoxyCompactList}\small\item\em Emotions is an Enum that keeps track of emotion score to denote a negative or positive score. \end{DoxyCompactList}\item 
+enum \hyperlink{classSentiment_af2c0cb9660017b389d6d0865843742b2}{color} \{ {\bfseries Blue} = 1, 
+{\bfseries Red} = -\/1
+ \}
+\begin{DoxyCompactList}\small\item\em color is an Enum that emotional color for Metis \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSentiment_a5a1779a5a705df433195ec737a4156ea}{int \hyperlink{classSentiment_a5a1779a5a705df433195ec737a4156ea}{emotion\-Score}}\label{classSentiment_a5a1779a5a705df433195ec737a4156ea}
+
+\begin{DoxyCompactList}\small\item\em emotion\-Score that is used to calculate whether sentiment is negative or positive. \end{DoxyCompactList}\item 
+\hypertarget{classSentiment_a177fabec96128aa37489b4db240535ae}{std\-::set$<$ std\-::string $>$ \hyperlink{classSentiment_a177fabec96128aa37489b4db240535ae}{wordlist}}\label{classSentiment_a177fabec96128aa37489b4db240535ae}
+
+\begin{DoxyCompactList}\small\item\em wordlist is a set that holds the negative or positive wordlist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSentiment_afddbb12fdb928ae171a88debef10234a}{\index{Sentiment@{Sentiment}!analysis@{analysis}}
+\index{analysis@{analysis}!Sentiment@{Sentiment}}
+\subsubsection[{analysis}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Sentiment\-::analysis (
+\begin{DoxyParamCaption}
+\item[{std\-::map$<$ std\-::string, int $>$}]{histogram}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classSentiment_afddbb12fdb928ae171a88debef10234a}
+
+
+analysis is a virtual function meant to be overriden by derived classes for the base classes analysis needs. 
+
+\begin{DoxyReturn}{Returns}
+std\-::string. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classNegativeSentiment_ae6f3705da961d94f33f93e161b1e506f}{Negative\-Sentiment}, and \hyperlink{classPositiveSentiment_aeafe92c377e07ef41859a8b804563705}{Positive\-Sentiment}.
+
+\hypertarget{classSentiment_aec1c59286392c42b307aade917128b45}{\index{Sentiment@{Sentiment}!set\-Emotion\-Score@{set\-Emotion\-Score}}
+\index{set\-Emotion\-Score@{set\-Emotion\-Score}!Sentiment@{Sentiment}}
+\subsubsection[{set\-Emotion\-Score}]{\setlength{\rightskip}{0pt plus 5cm}void Sentiment\-::set\-Emotion\-Score (
+\begin{DoxyParamCaption}
+\item[{int}]{emotion\-Score}
+\end{DoxyParamCaption}
+)}}\label{classSentiment_aec1c59286392c42b307aade917128b45}
+
+
+set\-Emotion\-Score assigns a value to the emotionscore class member variable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & emotion\-Score \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSentiment_a7845d7438489c469e24ed2018b8f28cc}{\index{Sentiment@{Sentiment}!set\-Wordlist@{set\-Wordlist}}
+\index{set\-Wordlist@{set\-Wordlist}!Sentiment@{Sentiment}}
+\subsubsection[{set\-Wordlist}]{\setlength{\rightskip}{0pt plus 5cm}void Sentiment\-::set\-Wordlist (
+\begin{DoxyParamCaption}
+\item[{std\-::set$<$ std\-::string $>$}]{wordlist}
+\end{DoxyParamCaption}
+)}}\label{classSentiment_a7845d7438489c469e24ed2018b8f28cc}
+
+
+set\-Wordlist assigns a value to the wordlist class member set 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\-::set$<$string$>$} & wordlist \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/Sentiment.\-hpp\item 
+app/Sentiment.\-cpp\end{DoxyCompactItemize}
