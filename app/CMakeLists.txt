@@ -1,4 +1,8 @@
-add_executable(shell-app main.cpp Parser.cpp)
+add_executable(shell-app main.cpp Parser.cpp 
+ Sentiment.cpp
+ PositiveSentiment.cpp
+ NegativeSentiment.cpp
+)
 include_directories(
     ${CMAKE_SOURCE_DIR}/include
 )

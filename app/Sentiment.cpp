@@ -1,27 +1,26 @@
-#include <string>
-#include <set>
+#include <Sentiment.hpp>
+#include <iostream>
 
-/**
- * @file   Sentitment.cpp
- * @date   Feb 20, 2017
- * @author Lamar Simpson
- *@brief Class that analyzes text and returns perceived sentiment.
- *Copyright 2017 Lamar Simpson
- */
-;
-class Sentiment{
+ int Sentiment::getEmotionScore() const  {
+    return emotionScore;
+  }
 
-public:
+  void Sentiment::setEmotionScore(int emotionScore) {
+    this->emotionScore = emotionScore;
+  }
 
-  Sentiment();
-  std::string analysis();
-  enum returnEmotion(int score);
+  std::set<std::string> Sentiment::getWordlist() const {
+    return wordlist;
+  }
+
+  void Sentiment::setWordlist(std::set<std::string> wordlist) {
+    this->wordlist = wordlist;
+    std::cout <<"word list set "<<std::endl;
+  }
 
 
-protected:
-  int emotionScore;
-  enum Emotions{"Positive", "Negative" };
+   void Sentiment::loadWordlist()  {
 
-  std::set<string>wordlist;
-};
+    std::cout<<"Base class word list "<<std::endl;
 
+  }

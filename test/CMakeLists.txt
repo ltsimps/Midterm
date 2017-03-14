@@ -5,6 +5,7 @@ add_executable(
     main.cpp
     test.cpp
     ../app/Parser.cpp
+    ../app/Sentiment.cpp
     
 )
 
