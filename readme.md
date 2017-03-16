@@ -16,16 +16,16 @@ Metis:
 Metis is a robot that shows the emotional content of it's surroundings. This midterm project deals with the perception by analyzing  Sentiment. This program reads input from the user or from files and denotes whether it is positive or negative
 
 
-#Demo
+##Demo
 When running the program simply enter the words you would like to have anaylzed and Metis will tell you if they are positive or negative.
 
-#BUG
+##BUG
 Right now there is a bug with the program and it's unable to run more than once. The program must be restarted for further analysis.
 
 
 
 
-#Exemplars 
+##Exemplars 
 This project contains a number of examples in 
 $../Positive_Examples 
 $../Negative_Examples
@@ -54,10 +54,10 @@ $ cd build
 $ cmake ..
 $ make
 
-#To Run the program
-$ ./app/metis
+##To Run the program
+$ ./app/metis-app
 
-#To Test the program
+##To Test the program
 ./test/test-cpp
 
 ```

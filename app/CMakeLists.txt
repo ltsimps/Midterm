@@ -1,4 +1,4 @@
-add_executable(shell-app main.cpp Parser.cpp 
+add_executable(metis-app main.cpp Parser.cpp 
  Sentiment.cpp
  PositiveSentiment.cpp
  NegativeSentiment.cpp

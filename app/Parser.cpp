@@ -62,6 +62,11 @@ std::vector<std::string> Parser::getInput() {
   string input = "";
   std::vector<string> file;
 
+  char c = std::cin.peek();  // peek character
+
+  if(c == '\n'){
+    cin.ignore();
+  }
 
   while ( getline(cin, line) ) {
        if (line.empty())
@@ -99,9 +104,12 @@ std::vector<std::string> Parser::getFileInput(std::string in ) {
       while ( inputFile >> value ) {
           file.push_back(value);
       }
+      std::cin.clear();
+      // input>>std:flush;
   }
   // close the file
   // std::cin.sync();
+ //  std::flush;
 
   return file;
 }
