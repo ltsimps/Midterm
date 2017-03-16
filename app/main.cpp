@@ -38,7 +38,7 @@ std::vector<string> dsiplayCurentFiles(const string& pattern) {
 }
 
 /**
- * @brief
+ * @brief  demon allows the user to choose between inputing their own text for analysis or using file input
  */
 std::string demo() {
   string response = "";
@@ -50,6 +50,9 @@ std::cout << "For file processing write 'file', write 'user' "
 return response;
 }
 
+/**
+ * @brief  getUserInput() obtains user input and processes it.
+ */
 void getUserInput() {
     std::cout << " " << std::endl;
     Parser  p;
@@ -91,7 +94,7 @@ void getUserInput() {
 }
 
 /**
- * @brief gets the file input from the user
+ * @brief gets the file input from the user and processes the data for analysis
  */
 
 void getFileInput() {

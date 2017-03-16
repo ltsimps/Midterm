@@ -13,12 +13,18 @@
 #include<fstream>
 #include <string>
 #include <set>
-
-#include<PositiveSentiment.hpp>
+#include <memory>
+#include <Parser.hpp>
+#include <Sentiment.hpp>
+#include <PositiveSentiment.hpp>
 #include <NegativeSentiment.hpp>
-#include  <Parser.hpp>
 
 using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
+
+
 
 
 
@@ -77,6 +83,207 @@ TEST(file_test, posLoadWordlist) {
   EXPECT_GT(sp->getWordlist().size(), 0);
 }
 
+TEST(sentiment, positiveSentiment1) {
+  Parser  p;
+  PositiveSentiment ps;
+  NegativeSentiment ns;
+  Sentiment *sp;
+  sp = &ps;
+
+  std::vector<string> vectorOutput;
+  std::map<string, int> histogram;
+  vectorOutput = p.getFileInput("../Positive_Examples/Positive_Example_1.txt");
 
 
+
+
+  sp->loadWordlist();
+  histogram =  p.generateHistogram(vectorOutput);
+  sp->analysis(histogram);
+  int positiveScore = sp->getEmotionScore();
+
+  sp  = &ns;
+  sp->loadWordlist();
+  sp->analysis(histogram);
+  int negativeScore = sp->getEmotionScore();
+
+
+  EXPECT_GT(positiveScore, negativeScore);
+}
+
+
+TEST(sentiment, positiveSentiment2) {
+  Parser  p;
+  PositiveSentiment ps;
+  NegativeSentiment ns;
+  Sentiment *sp;
+  sp = &ps;
+
+  std::vector<string> vectorOutput;
+  std::map<string, int> histogram;
+  vectorOutput = p.getFileInput("../Positive_Examples/Positive_Example_2.txt");
+
+
+
+
+  sp->loadWordlist();
+  histogram =  p.generateHistogram(vectorOutput);
+  sp->analysis(histogram);
+  int positiveScore = sp->getEmotionScore();
+
+  sp  = &ns;
+  sp->loadWordlist();
+  sp->analysis(histogram);
+  int negativeScore = sp->getEmotionScore();
+
+
+  EXPECT_GT(positiveScore, negativeScore);
+}
+
+TEST(sentiment, positiveSentiment3) {
+  Parser  p;
+  PositiveSentiment ps;
+  NegativeSentiment ns;
+  Sentiment *sp;
+  sp = &ps;
+
+  std::vector<string> vectorOutput;
+  std::map<string, int> histogram;
+  vectorOutput = p.getFileInput("../Positive_Examples/Positive_Example_3.txt");
+
+
+
+
+  sp->loadWordlist();
+  histogram =  p.generateHistogram(vectorOutput);
+  sp->analysis(histogram);
+  int positiveScore = sp->getEmotionScore();
+
+  sp  = &ns;
+  sp->loadWordlist();
+  sp->analysis(histogram);
+  int negativeScore = sp->getEmotionScore();
+
+
+  EXPECT_GT(positiveScore, negativeScore);
+}
+
+
+
+
+
+
+TEST(sentiment, negativeSentiment1) {
+  Parser  p;
+  PositiveSentiment ps;
+  NegativeSentiment ns;
+  Sentiment *sp;
+  sp = &ps;
+
+  std::vector<string> vectorOutput;
+  std::map<string, int> histogram;
+  vectorOutput = p.getFileInput("../Negative_Examples/Negative_Example_1.txt");
+
+
+
+
+  sp->loadWordlist();
+  histogram =  p.generateHistogram(vectorOutput);
+  sp->analysis(histogram);
+  int positiveScore = sp->getEmotionScore();
+
+  sp  = &ns;
+  sp->loadWordlist();
+  sp->analysis(histogram);
+  int negativeScore = sp->getEmotionScore();
+
+
+  EXPECT_GT(negativeScore, positiveScore);
+}
+
+TEST(sentiment, negativeSentiment2) {
+  Parser  p;
+  PositiveSentiment ps;
+  NegativeSentiment ns;
+  Sentiment *sp;
+  sp = &ps;
+
+  std::vector<string> vectorOutput;
+  std::map<string, int> histogram;
+  vectorOutput = p.getFileInput("../Negative_Examples/Negative_Example_2.txt");
+
+
+
+
+  sp->loadWordlist();
+  histogram =  p.generateHistogram(vectorOutput);
+  sp->analysis(histogram);
+  int positiveScore = sp->getEmotionScore();
+
+  sp  = &ns;
+  sp->loadWordlist();
+  sp->analysis(histogram);
+  int negativeScore = sp->getEmotionScore();
+
+
+  EXPECT_GT(negativeScore, positiveScore);
+}
+
+
+
+TEST(sentiment, negativeSentiment3) {
+  Parser  p;
+  PositiveSentiment ps;
+  NegativeSentiment ns;
+  Sentiment *sp;
+  sp = &ps;
+
+  std::vector<string> vectorOutput;
+  std::map<string, int> histogram;
+  vectorOutput = p.getFileInput("../Negative_Examples/Negative_Example_3.txt");
+
+
+
+
+  sp->loadWordlist();
+  histogram =  p.generateHistogram(vectorOutput);
+  sp->analysis(histogram);
+  int positiveScore = sp->getEmotionScore();
+
+  sp  = &ns;
+  sp->loadWordlist();
+  sp->analysis(histogram);
+  int negativeScore = sp->getEmotionScore();
+
+
+  EXPECT_GT(negativeScore, positiveScore);
+}
+
+TEST(sentiment, neuralSentiment) {
+  Parser  p;
+  PositiveSentiment ps;
+  NegativeSentiment ns;
+  Sentiment *sp;
+  sp = &ps;
+
+  std::vector<string> vectorOutput;
+  std::map<string, int> histogram;
+  vectorOutput = p.getFileInput("../Random_Examples/Random_Example_3.txt");
+
+
+
+
+  sp->loadWordlist();
+  histogram =  p.generateHistogram(vectorOutput);
+  sp->analysis(histogram);
+  int positiveScore = sp->getEmotionScore();
+
+  sp  = &ns;
+  sp->loadWordlist();
+  sp->analysis(histogram);
+  int negativeScore = sp->getEmotionScore();
+
+
+  EXPECT_EQ(negativeScore, positiveScore);
+}
 
