@@ -64,7 +64,7 @@ std::vector<std::string> Parser::getInput() {
 
   char c = std::cin.peek();  // peek character
 
-  if(c == '\n'){
+  if (c == '\n') {
     cin.ignore();
   }
 
@@ -107,10 +107,6 @@ std::vector<std::string> Parser::getFileInput(std::string in ) {
       std::cin.clear();
       // input>>std:flush;
   }
-  // close the file
-  // std::cin.sync();
- //  std::flush;
-
   return file;
 }
 

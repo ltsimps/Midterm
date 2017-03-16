@@ -28,7 +28,7 @@ class Parser {
      * @brief Handles getting input from File exemplars or user specified files.
      * @return std::vector<std::string> that contains all input from files specified by the user or file exemplars.
     */
-  std::vector<std::string> getFileInput( std::string in );
+  std::vector<std::string> getFileInput(std::string in);
 
   /**
    * @brief  generateHistogram takes a input vector and counts the frequency of words in that input and return a map

@@ -16,17 +16,14 @@ Metis:
 Metis is a robot that shows the emotional content of it's surroundings. This midterm project deals with the perception by analyzing  Sentiment. This program reads input from the user or from files and denotes whether it is positive or negative
 
 
-##Demo
-When running the program simply enter the words you would like to have anaylzed and Metis will tell you if they are positive or negative.
-
-##BUG
-Right now there is a bug with the program and it's unable to run more than once. The program must be restarted for further analysis.
+## Demo
+When running the program simply enter the words you would like to have anaylzed and Metis will tell you if they are positive, Neutral or Negative. You also have the option of entering a file or picking from the exemplar list.
 
 
 
 
-##Exemplars 
-This project contains a number of examples in 
+## Exemplars 
+This project contains a number of examples in. You can also enter your own files here.
 $../Positive_Examples 
 $../Negative_Examples
 
@@ -54,21 +51,21 @@ $ cd build
 $ cmake ..
 $ make
 
-##To Run the program
+## To Run the program
 $ ./app/metis-app
 
-##To Test the program
+## To Test the program
 ./test/test-cpp
 
 ```
 
-##Doxygen Documentation
+## Doxygen Documentation
 Contained in the docs folder of the project.
 
 $ cd docs/
 
 
-##References
+## References
   Minqing Hu and Bing Liu. "Mining and Summarizing Customer Reviews." 
         Proceedings of the ACM SIGKDD International Conference on Knowledge 
         Discovery and Data Mining (KDD-2004), Aug 22-25, 2004, Seattle, 

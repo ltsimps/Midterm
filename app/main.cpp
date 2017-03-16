@@ -5,7 +5,7 @@
  * copyright 2017 Lamar Simpson
  *@brief Parsed input from the user.
  */
-
+#include <glob.h>
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -26,22 +26,20 @@ using std::endl;
   * @brief continueProgram is a helper function that allows the user to continue with the application
   * @return boolean value denoting the user's desire to continue the program.
  */
-
-#include <glob.h>
-
-
-
-std::vector<string> dsiplayCurentFiles(const string& pattern){
+std::vector<string> dsiplayCurentFiles(const string& pattern) {
     glob_t glob_result;
-    glob(pattern.c_str(),GLOB_TILDE,NULL,&glob_result);
+    glob(pattern.c_str(), GLOB_TILDE, NULL, &glob_result);
     std::vector<string> files;
-    for(unsigned int i=0;i<glob_result.gl_pathc;++i){
+    for (unsigned int i=0 ; i< glob_result.gl_pathc; ++i) {
         files.push_back(string(glob_result.gl_pathv[i]));
     }
     globfree(&glob_result);
     return files;
 }
 
+/**
+ * @brief
+ */
 std::string demo() {
   string response = "";
 
@@ -52,8 +50,8 @@ std::cout << "For file processing write 'file', write 'user' "
 return response;
 }
 
-void getUserInput(){
-    std::cout<<" "<<std::endl;
+void getUserInput() {
+    std::cout << " " << std::endl;
     Parser  p;
     PositiveSentiment ps;
     NegativeSentiment ns;
@@ -71,7 +69,7 @@ void getUserInput(){
 
 
     strOutput = p.stringConversion(vectorOutput);
-    cout<< "INPUT Below \n" << strOutput << endl;
+    std::cout<< "INPUT Below \n" << strOutput << std::endl;
     histogram =  p.generateHistogram(vectorOutput);
 
 
@@ -86,15 +84,18 @@ void getUserInput(){
 
   if (positiveScore > negativeScore)
      std::cout << "\033[1;34mPOSITIVE\033[0m\n" << std::endl;
-   else if (positiveScore < negativeScore)
+  else if (positiveScore < negativeScore)
      std::cout << "\033[1;31mNEGATIVE\033[0m\n" << std::endl;
-   else
+  else
      std::cout << "\033[1;36mNEUTRAL\033[0m\n" << std::endl;
-
 }
 
-void getFileInput(){
-    std::cout<<" "<<std::endl;
+/**
+ * @brief gets the file input from the user
+ */
+
+void getFileInput() {
+    std::cout << " " << std::endl;
     Parser  p;
     PositiveSentiment ps;
     NegativeSentiment ns;
@@ -109,25 +110,22 @@ void getFileInput(){
     string filename = "";
     std::cout << "Current File Choices  " << std::endl;
 
-    std::vector<string>  posFiles = dsiplayCurentFiles("../Positive_Examples/*");
-    std::vector<string>  negFiles = dsiplayCurentFiles("../Negative_Examples/*");
+    std::vector<string> posFiles = dsiplayCurentFiles("../Positive_Examples/*");
+    std::vector<string> negFiles = dsiplayCurentFiles("../Negative_Examples/*");
 
-    for(auto file : posFiles){
+    for (auto file : posFiles) {
       std::cout << file << " " << std::endl;
     }
 
     std::cout << std::endl;
 
-    for(auto file : negFiles){
+    for (auto file : negFiles) {
          std::cout << file << " " << std::endl;
     }
 
-
-
-    std::cout << "enter file name "<<std::endl;
+    std::cout << "enter file name " << std::endl;
     std::cin >> filename;
 
-    //vectorOutput = p.getFileInput("../Positive_Examples/Positive_Example_1.txt");
     vectorOutput = p.getFileInput(filename);
 
     strOutput = p.stringConversion(vectorOutput);
@@ -150,7 +148,6 @@ void getFileInput(){
     std::cout << "\033[1;31mNEGATIVE\033[0m\n" << std::endl;
   else
     std::cout << "\033[1;36mNEUTRAL\033[0m\n" << std::endl;
-
 }
 
 
@@ -160,32 +157,23 @@ int main() {
   string response =  "Y";
 
 
-  while (response == "Y" ||  response == "y") {
+  while (response == "Y" || response == "y") {
     std::cin.clear();
-    //cin>>response;
 
-    //runProgram();
-    //getFileInput();
-
-  std::string processing = demo();
-  if(processing == "user") {
+    std::string processing = demo();
+  if (processing == "user") {
     getUserInput();
-  }else if(processing == "file"){
-   //vectorOutput = p.getFileInput("../Positive_Examples/Positive_Example_1.txt");
-   getFileInput();
+  } else if (processing == "file") {
+    getFileInput();
 
-  }else{
-    std::cout<<"Bad Input please enter file or user (all lowercase)\n" <<std::endl;
+  } else {
+    std::cout << "Bad Input please enter file or user (all lowercase)\n"
+        << std::endl;
     continue;
   }
 
   std::cout << "Enter y or Y if you wish to continue " << std::endl;
   std::cin >> response;
-
-
- }
-
-
-
+}
   return 0;
 }
